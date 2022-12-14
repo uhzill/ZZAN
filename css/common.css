@@ -46,6 +46,7 @@ section {
 
 .wrap_1200 {
     max-width: 1200px;
+    min-width: 1000px;
     height: 100%;
     margin: 0 auto;
     padding: 20vh 0;

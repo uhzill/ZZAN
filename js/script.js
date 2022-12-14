@@ -30,16 +30,13 @@ $(document).ready(function(){
 
 
 
-        let overview = document.querySelector('#zzan_box');
 
         // 스크롤한 값만큼 원 모양이 커지도록 함
         let circleSize = window.scrollY;
-        let text = document.querySelector('.zzan_text');
-        let innerText = document.querySelector('.inner_text');
 
-        overview.style.clipPath = "circle(" + circleSize + "px at center center)";
-        text.style.left = 100 - circleSize / 5 + '%';
-        innerText.style.left = 100 - circleSize / 5 + '%';
+        $('#zzan_box').css("clipPath","circle(" + circleSize + "px at center center)");
+        $('.zzan_text').css("left", 100 - circleSize / 5 + '%');
+        $('.inner_text').css("left", 100 - circleSize / 5 + '%');
 
         // 현재 스크롤이 어디에 위치해 있는지 알 수 있음
         const scrollPosition = $(document).scrollTop();
@@ -127,8 +124,7 @@ $(document).ready(function(){
 
 
 
-    // [ 서비스 모션 스크롤매직 ]
-
+    // [ 서비스 모션 - 스크롤매직 라이브러리 ]
 	$(function(){
 		var controller = new ScrollMagic.Controller();
 

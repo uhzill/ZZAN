@@ -158,14 +158,13 @@
 
 #overview .wrap_1200 {
     padding-top: 100vh;
-    width: 1000px;
 }
 
 #overview .wrap_1200 .q_a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: (100vh * 100 / 1000) 0;
+    margin: calc(100vh * 100 / 1000);
 }
 
 #q_img1,
@@ -858,7 +857,7 @@ table#icon_box2 {
 .white_box {
     height: 80vh;
     background-color: #fff;
-    border-radius: 3vw;
+    border-radius: 1.5vw;
     width: 1000px;
     display: flex;
     align-items: center;
