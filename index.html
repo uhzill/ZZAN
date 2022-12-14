@@ -35,19 +35,24 @@
 
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js'></script>
     <script src="./js/script.js"></script>
   </head>
   <body>
     <div id="wrap">
-      <!-- 마우스 커서 커스텀 -->
-      <div class="cursor"></div>
+      <div class="loader">
+          <div class="lodeMotion"></div>
+      </div>
 
       <!-- gnb -->
       <header>
         <nav>
           <h1><a id="logo" href="index.html">ZZAN!</a></h1>
           <ul id="gnb">
-            <li><a href="#overview">Overview</a></li>
+            <li><a href="#_overview">Overview</a></li>
             <li><a href="#design">Design</a></li>
             <li><a href="#service">Service</a></li>
             <li><a href="#video">Video</a></li>
@@ -65,7 +70,7 @@
             <img src="./img/app_logo.png" alt="ZZAN! 로고">
 
             <div class="wrap">
-              <p>돌아오지 않을 오늘을 위해!</p>
+              <p>돌아오지 않을 오늘을 위해</p>
               <p>ZZAN!</p>
               <p>우리를 위한 주류문화 앱 서비스</p>
               <p>Team. DoReMi</p>
@@ -86,18 +91,16 @@
 
         <section id="overview">
           <div class="wrap_1200">
-            <h2>Overview</h2>
+            <h2 id="_overview">Overview</h2>
 
             <div class="q_a">
               <div class="question">
                 <img id="q_img1" src="./img/overview_q1.png" alt="캐릭터">
                 <p id="question1">술자리 갈 때 어떻게 해야 해?</p>
               </div>
-              <p id="answer1" class="answer">
-                성인이 된 후 술을 접해야 할 상황이 종종 생기곤 하죠...! <br>
+              <p id="answer1" class="answer">성인이 된 후 술을 접해야 할 상황이 종종 생기곤 하죠...!
                 하지만 익숙하지 않은 상황을 즐기기 어려운 경우가 많습니다. 
-                ZZAN!은 <span>술자리가 낯선 이들을 위한 서비스</span>를
-                제공합니다
+                ZZAN!은 <span>술자리가 낯선 이들을 위한 서비스</span>를 제공합니다
               </p>
             </div>
 
@@ -106,9 +109,8 @@
                 <img id="q_img2" src="./img/overview_q2.png" alt="캐릭터">
                 <p id="question2">뭐야, 그럼 술을 즐기라는 거야?</p>
               </div>
-              <div id="answer2" class="answer">
-                술 마시는 것을 권장하는 게 아니에요!<br>
-                <span>분위기를 즐길 수 있도록</span> 합니다.<br>
+              <div id="answer2" class="answer">술 마시는 것을 권장하는 게 아니에요!
+                <span>분위기를 즐길 수 있도록</span> 합니다.
                 ZZAN! 을 통해 즐거운 술자리를 만들어 보세요!
               </div>
             </div>
@@ -338,57 +340,59 @@
         <section id="service">
         <div class="wrap_1200">
           <h2 class="blind">Service</h2>
-
-          <div class="service_box">
-            <img src="./img/ser_mode1.png" alt="무드메이커">
-            <div class="speech_bubble">
-              <h3>
-                <p>무드메이커</p>
-                <p>MODE MAKER</p>
-              </h3>
-              <div class="service_text">
-                회사에서 깨지고, 성적은 낮아지고, 과제는 너무 힘들어! <br>
-                이런 날엔 한잔하면서 스트레스라도 풀어야지!
+            <div class="service_box service_box1">
+              <div class="white_box">
+                <img class="trigger1 app" src="./img/ser_mode1.png" alt="무드메이커">
+                <div class="speech_bubble">
+                  <h3 class="trigger2">
+                    <p>무드메이커</p>
+                    <p>MODE MAKER</p>
+                  </h3>
+                  <div class="service_text trigger3">회사에서 깨지고... 성적은 낮아지고...
+                    과제는 너무 힘들어...!! <img class="emoticon trigger4" src="./img/emoticon1.png" alt="우는 표정">
+                  </div>
+                  <div class="service_text trigger5">오늘의 기분에 따라 오늘의 주류를 추천해드립니다!
+                    다른 유저의 리뷰와 별점 확인해보세요!
+                  </div>
+                </div>
               </div>
-              <div class="service_text">
-                오늘의 기분에 따라 오늘의 주류를 추천해드립니다! <br>
-                다른 유저의 리뷰와 별점 확인해보세요!
+            </div>
+
+          <div class="service_box service_box2">
+            <div class="white_box">
+              <img class="trigger6 app" src="./img/ser_home1.png" alt="홈 칵테일">
+              <div class="speech_bubble">
+                <h3 class="trigger7">
+                  <p>홈 칵테일</p> 
+                  <p>HOME COCKTAIL</p>
+                </h3>
+                <div class="service_text trigger8">오늘은 조금 특별하고 싶다
+                  생각보다 입맛에 맞지 않아 보관해둔 
+                  소주, 맥주, 음료, 아이스크림 등...
+                  간단한 레시피로 재탄생 시켜 볼까요?
+                </div>
+                <div class="service_text trigger9">쉽게 구할 수 있는 재료로 집에서도 색다른 칵테일을!<img class="emoticon trigger10" src="./img/emoticon2.png" alt="기분좋은 표정">
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="service_box">
-            <img src="./img/ser_home1.png" alt="홈 칵테일">
-            <div class="speech_bubble">
-              <h3>
-                <p>홈 칵테일</p> 
-                <p>HOME COCKTAIL</p>
-              </h3>
-              <div class="service_text">
-                오늘은 조금 특별하고 싶은데 좋은 아이디어 없을까? <br>
-                생각보다 입맛에 맞지 않아 보관해둔 소주, 맥주, 음료, 아이스크림 등... <br>
-                간단한 레시피로 재탄생 시켜 볼까요?
-              </div>
-              <div class="service_text">
-                쉽게 구할 수 있는 재료로 집에서도 색다른 칵테일을!
-              </div>
-            </div>
-          </div>
-
-          <div class="service_box">
-            <img src="./img/ser_info1.png" alt="주류정보">
-            <div class="speech_bubble">
-              <h3>
-                <p>주류정보</p>
-                <p>LIQUOR INFORMATION</p>
-              </h3>
-              <div class="service_text">
-                바쁘다 바빠 현대사회...! 무엇 하나 느긋하지 못한 요즘은 <br>
-                새로운 제품이 나오는 속도조차 빠르죠...! <br>
-                오늘도 편의점에서 마주쳤던 그 제품, 도대체 무슨 맛일까?
-              </div>
-              <div class="service_text">
-                유저들의 리뷰와 함께 다양한 주류정보를 확인해 보세요!
+          <div class="service_box service_box3">
+            <div class="white_box">
+              <img class="trigger11 app" src="./img/ser_info1.png" alt="주류정보">
+              <div class="speech_bubble">
+                <h3 class="trigger12">
+                  <p>주류정보</p>
+                  <p>LIQUOR INFORMATION</p>
+                </h3>
+                <div class="service_text trigger13">바쁘다 바빠 현대사회...! 
+                  무엇 하나 느긋하지 못한 요즘은
+                  새로운 제품이 나오는 속도조차 빠릅니다!
+                  오늘도 편의점에서 마주쳤던 그 제품, 
+                  도대체 무슨 맛일까?
+                </div>
+                <div class="service_text trigger14">유저들의 리뷰와 함께 다양한 주류정보를 확인해 보세요!<img class="emoticon trigger15" src="./img/emoticon3.png" alt="하트">
+                </div>
               </div>
             </div>
           </div>
@@ -447,7 +451,7 @@
           </div>
         </div>
         </section>
-      </div>
+      
 
       <footer>
       <div class="wrap_1200">
@@ -462,7 +466,7 @@
         </ul>
       </div>
       </footer>
-
+</div>
     </div>
   </body>
 </html>

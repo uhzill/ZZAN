@@ -1,6 +1,9 @@
+// [로딩화면]
+$(window).load(function(){
+    $(".loader").fadeOut();
+});
 
 $(document).ready(function(){
-
 
     // 스크롤 이벤트에 따른 요소 변화
     $(window).scroll(function () {
@@ -62,7 +65,7 @@ $(document).ready(function(){
 
 
         // [ 말풍선 모션 ]
-        if(scrollPosition >= winHeight * 3 - 300) {
+        if(scrollPosition >= winHeight * 3 - 400) {
             $('#q_img1').addClass('active');
             $('#question1').addClass('active');
             $('#answer1').addClass('active');
@@ -73,7 +76,7 @@ $(document).ready(function(){
             $('#answer1').removeClass('active');
         }
 
-        if(scrollPosition >= winHeight * 3 - 50) {
+        if(scrollPosition >= winHeight * 3 - 100) {
             $('#q_img2').addClass('active');
             $('#question2').addClass('active');
             $('#answer2').addClass('active');
@@ -107,13 +110,6 @@ $(document).ready(function(){
             $('#logo_img2').removeClass('active');
         }
 
-
-        // [ 서비스 소개 ]
-        // 일곱번째 섹션에 오면(스크롤 위치가 화면크기의 7배-200이 되면) 실행
-        if(scrollPosition >= winHeight * 9) {
-            $('#service').css('position', 'sticky');
-        } 
-
     });
 
 
@@ -128,4 +124,67 @@ $(document).ready(function(){
             $(this).attr("src", $(this).attr("src").replace("_pink.png", ".png")); 
         });
     }
+
+
+
+    // [ 서비스 모션 스크롤매직 ]
+
+	$(function(){
+		var controller = new ScrollMagic.Controller();
+
+        var tween = new TimelineMax()
+        .fromTo(".trigger1", 1, {x:"-1000%"}, {x:"0%"} )
+        .fromTo(".trigger2", 1, {y:"1000%"}, {y:"0%"} )
+        .fromTo(".trigger3", 1, {y:"1000%"}, {y:"0%"} )
+        .fromTo(".trigger4", 2, {scale: 0}, {scale:1} )
+        .fromTo(".trigger5", 1, {y:"1000%"}, {y:"0%"} )
+        
+		var scene = new ScrollMagic.Scene({
+			triggerElement: '.service_box1',
+            triggerHook: 0,
+			duration: "250%"
+		})
+        .addTo(controller)
+        .setPin('.service_box1')
+        .setTween(tween)
+
+
+		var controller2 = new ScrollMagic.Controller();
+
+        var tween2 = new TimelineMax()
+        .fromTo(".trigger6", 1, {x:"-1000%"}, {x:"0%"} )
+        .fromTo(".trigger7", 1, {y:"1000%"}, {y:"0%"} )
+        .fromTo(".trigger8", 1, {y:"1000%"}, {y:"0%"} )
+        .fromTo(".trigger9", 1, {y:"1000%"}, {y:"0%"} )
+        .fromTo(".trigger10", 2, {scale: 0}, {scale:1}  )
+        
+		var scene2 = new ScrollMagic.Scene({
+			triggerElement: '.service_box2',
+            triggerHook: 0,
+			duration: "250%"
+		})
+        .addTo(controller2)
+        .setPin('.service_box2')
+        .setTween(tween2)
+
+
+        var controller3 = new ScrollMagic.Controller();
+
+        var tween3 = new TimelineMax()
+        .fromTo(".trigger11", 1, {x:"-1000%"}, {x:"0%"} )
+        .fromTo(".trigger12", 1, {y:"1000%"}, {y:"0%"} )
+        .fromTo(".trigger13", 1, {y:"1000%"}, {y:"0%"} )
+        .fromTo(".trigger14", 1, {y:"1000%"}, {y:"0%"} )
+        .fromTo(".trigger15", 2, {scale: 0}, {scale:1}  )
+        
+		var scene3 = new ScrollMagic.Scene({
+			triggerElement: '.service_box3',
+            triggerHook: 0,
+			duration: "250%"
+		})
+        .addTo(controller3)
+        .setPin('.service_box3')
+        .setTween(tween3)
+	});
+
 });
