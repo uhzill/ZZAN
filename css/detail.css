@@ -160,6 +160,10 @@
     padding-top: 100vh;
 }
 
+#overview h2 {
+    text-align: center;
+}
+
 #overview .wrap_1200 .q_a {
     display: flex;
     flex-direction: column;
