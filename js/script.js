@@ -1,4 +1,4 @@
-// [로딩화면]
+// [ 로딩화면 ]
 $(window).load(function(){
     $(".loader").fadeOut();
 });
@@ -30,7 +30,7 @@ $(document).ready(function(){
 
 
 
-
+        // [ ZZAN! 텍스트 모션 ]
         // 스크롤한 값만큼 원 모양이 커지도록 함
         let circleSize = window.scrollY;
 
@@ -45,10 +45,6 @@ $(document).ready(function(){
         const winHeight = $('section').height();
 
 
-
-
-
-        // [ ZZAN! 텍스트 모션 ]
         // 스크롤한 값만큼 원 모양이 커지며 안에 있는 켁스트가 보여지는 모션
         // 두번째 섹션에 오면(스크롤 위치가 화면크기의 2배가 되면) 실행
         if(scrollPosition >= winHeight * 2) {
@@ -62,6 +58,7 @@ $(document).ready(function(){
 
 
         // [ 말풍선 모션 ]
+        // 세번째 섹션에 오면(스크롤 위치가 화면크기의 3배 - 400이 되면) 실행
         if(scrollPosition >= winHeight * 3 - 400) {
             $('#q_img1').addClass('active');
             $('#question1').addClass('active');
