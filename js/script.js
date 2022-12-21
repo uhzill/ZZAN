@@ -135,7 +135,7 @@ $(document).ready(function(){
 		var scene = new ScrollMagic.Scene({
 			triggerElement: '.service_box1',
             triggerHook: 0,
-			duration: "250%"
+			duration: "350%"
 		})
         .addTo(controller)
         .setPin('.service_box1')
@@ -154,7 +154,7 @@ $(document).ready(function(){
 		var scene2 = new ScrollMagic.Scene({
 			triggerElement: '.service_box2',
             triggerHook: 0,
-			duration: "250%"
+			duration: "350%"
 		})
         .addTo(controller2)
         .setPin('.service_box2')
@@ -173,7 +173,7 @@ $(document).ready(function(){
 		var scene3 = new ScrollMagic.Scene({
 			triggerElement: '.service_box3',
             triggerHook: 0,
-			duration: "250%"
+			duration: "350%"
 		})
         .addTo(controller3)
         .setPin('.service_box3')
